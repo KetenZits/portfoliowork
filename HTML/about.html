@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>About me</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/about.css" />
+  </head>
+  <body>
+    <!-------------header--------------->
+    <div class="header">
+      <div class="logo">
+        <img src="/PIC/navpic/sarasas.jpg" alt="" />
+        <img src="/PIC/navpic/iroverbot.jpg" alt="" />
+      </div>
+      <div class="nav">
+        <li><a href="/HTML/home.html">Home</a></li>
+        <li><a href="/HTML/activity.html">Activity</a></li>
+        <li><a href="/HTML/about.html">About</a></li>
+      </div>
+      <li><a href="/HTML/contact.html" id="contact">Contact</a></li>
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="close-btn" onclick="toggleMenu()">&times;</div>
+      <a href="/HTML/home.html">Home</a>
+      <a href="/HTML/activity.html">Activity</a>
+      <a href="/HTML/about.html">About</a>
+      <a href="/HTML/contact.html" class="cta">Contact</a>
+    </div>
+    <!-- ---------------------- -->
+    <div class="">
+      <div class="about">
+        <div class="about-text-thai">
+          <h3>สวัสดีครับทุกท่าน</h3>
+          <p>
+            ยินดีต้อนรับเข้าสู่เว็บไซต์ของกระผม
+            เว็บไซต์นี้ถูกสร้างขึ้นเพื่อเป็นตัวแทนในการนำเสนอผลงานของกระผมในหลายๆ
+            ด้าน ไม่ว่าจะเป็นด้านวิชาการหรือด้านสันทนาการ
+            ผลงานทางวิชาการของกระผมประกอบด้วยการแข่งขัน โครงการวิจัย
+            และผลงานทางวิชาการอื่นๆ
+            ที่สะท้อนถึงความรู้และความสามารถของกระผมในสาขาต่างๆ
+            ทั้งนี้เพื่อแสดงให้เห็นถึงความตั้งใจและความทุ่มเทในการศึกษา
+            การค้นคว้า และการสร้างความเป็นเลิศในสภาพแวดล้อมที่มีการแข่งขัน
+            นอกจากนี้ยังเป็นโอกาสให้ผู้ที่สนใจสามารถเรียนรู้และนำไปประยุกต์ใช้ในการพัฒนาตนเองได้
+            นอกจากนี้ยังมีผลงานด้านสันทนาการ ซึ่งรวมถึงกิจกรรม งานอดิเรก
+            และความสนใจส่วนตัว
+            ที่จะช่วยให้ทุกท่านได้รู้จักกระผมในมุมที่ต่างออกไป
+            กระผมหวังว่าเว็บไซต์นี้จะเป็นแหล่งข้อมูลและแรงบันดาลใจให้กับทุกท่าน
+            หากมีข้อเสนอแนะหรือความคิดเห็นใดๆ
+            กระผมยินดีรับฟังและพัฒนาเว็บไซต์ให้ดียิ่งขึ้น
+            ขอบคุณทุกท่านที่เข้ามาเยี่ยมชมเว็บไซต์ของกระผม
+          </p>
+        </div>
+        <!-- <hr /> -->
+        <div class="about-text-eng">
+          <h3>Hello everyone,</h3>
+          <p>
+            Welcome to my website. This site was created to showcase my work in
+            various fields, both academic and recreational. My academic work
+            includes competitions, research projects, and other scholarly
+            outputs that reflect my knowledge and skills in various disciplines.
+            These works demonstrate my dedication and effort in studying,
+            researching, and excelling in competitive environments. This is an
+            opportunity for those interested to learn and apply the knowledge to
+            their own development. In addition to academic work, there are also
+            recreational activities, hobbies, and personal interests that will
+            help you get to know me from a different perspective. I hope this
+            website serves as a valuable source of information and inspiration
+            for everyone. If you have any suggestions or feedback, I am more
+            than happy to hear them and improve the website further. Thank you
+            all for visiting my website.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------- -->
+    <footer>
+      <div class="det-footer">
+        <h3>Portfolio Teeratat Wiboonsanti</h3>
+        <hr />
+      </div>
+      <div class="det-icon">
+        <a
+          href="https://www.instagram.com/wiboonasti?igsh=bGJ2M2FpbjF6Yjh4&utm_source=qr"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/profile.php?id=61554584263650&mibextid=JRoKGi"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://line.me/ti/p/BGCkAemJQA"
+          ><i class="fa-brands fa-line"></i
+        ></a>
+      </div>
+    </footer>
+    <script src="/JS/app.js"></script>
+  </body>
+</html>

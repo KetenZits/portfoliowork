@@ -1,0 +1,484 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Thai:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  /* background: rgb(10, 91, 139);
+  background: linear-gradient(
+    175deg,
+    rgba(10, 91, 139, 1) 25%,
+    rgba(20, 156, 236, 1) 100%
+  ); */
+  background: rgb(38, 22, 215);
+  background: linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+}
+
+:root {
+  --gap-nav-bar: 2.5rem;
+  --color-normal-font: rgb(12, 117, 214);
+  --color-supnormal-font: rgb(75, 157, 234);
+  --color-supersupnormal-font: rgb(113, 185, 253);
+  --color-hover-font: rgb(133, 196, 255);
+  --shadow-color-hover: rgb(90, 174, 252);
+  --activity-color-font: #073c5b;
+  --supactivity-color-font: #0a5b8b;
+  --big-font-size: 2.75rem;
+  --h1-font-size: 1.8rem;
+  --h2-font-size: 1.65rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --mg-section: 5rem;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+  font-family: "Kanit", serif;
+  list-style-type: none;
+}
+
+/*-----------------------------------------------------*/
+
+.logo h2 {
+  background: -webkit-linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: var(--big-font-size);
+  cursor: pointer;
+  font-weight: 800;
+  /* border: 1px solid; */
+}
+.logo img {
+  max-width: 65px;
+}
+.header {
+  display: flex;
+  /* border: 1px solid red; */
+  justify-content: space-evenly;
+  align-items: center;
+  height: 75px;
+  /* background-color: #d7c016; */
+  background-color: white;
+}
+.header ul {
+  display: flex;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  gap: var(--gap-nav-bar);
+}
+.nav li a {
+  font-size: var(--h1-font-size);
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: var(--font-medium);
+  transition: 0.2s ease;
+}
+.nav li a:hover {
+  background: -webkit-linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 10px #0800ff);
+}
+.header li #contact {
+  font-size: var(--h1-font-size);
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: var(--font-medium);
+  padding: 10px 15px;
+  border-radius: 15px;
+  transition: 0.25s ease;
+}
+.header li #contact:hover {
+  background: linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+  color: white;
+  filter: drop-shadow(0 0 5px rgb(132, 0, 255));
+}
+/*---------------------------mobile-nav------------------------*/
+.hamburger {
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-color);
+  display: none;
+}
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  background: white;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+  padding: 50px 20px;
+  transition: right 0.4s ease-in-out;
+  z-index: 999;
+}
+.mobile-menu.show {
+  right: 0;
+}
+.mobile-menu a {
+  display: block;
+  padding: 15px;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.mobile-menu a:hover {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 10px #0800ff);
+}
+.mobile-menu .cta {
+  display: block;
+  background-color: #008cff; /* สีส้ม หรือเปลี่ยนเป็นสีอื่นที่ต้องการ */
+  padding: 10px;
+  text-align: center;
+  border-radius: 15px;
+  color: rgb(255, 255, 255); /* สีตัวอักษร */
+  margin-top: 20px;
+  font-weight: bold;
+}
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+/*---------------------------mobile-nav------------------------*/
+/*-----------------------------------------------------*/
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  /* border: 1px solid red; */
+  height: 100dvh;
+  background-color: #ffffff;
+  /* padding: 2rem 2.5rem; */
+  margin: 25px 25px;
+  border-radius: 15px;
+}
+.contact .head-contact h2 {
+  font-size: 65px;
+  font-weight: 800;
+  background: -webkit-linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pop 0.5s forwards;
+  opacity: 0;
+  animation-delay: 0.35s;
+}
+.contact-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+.contact .contact-box .contact-card {
+  color: white;
+  max-height: 350px;
+  text-align: center;
+  max-width: 350px;
+  margin: 35px;
+  border-radius: 15px;
+  transition: background 0.35s ease-out;
+  border: 3px solid rgb(255, 255, 255);
+  filter: drop-shadow(0 0 9px rgb(17, 72, 255));
+}
+.contact .contact-box .insta {
+  background: rgb(67, 48, 208);
+  background: linear-gradient(
+    135deg,
+    rgba(67, 48, 208, 1) 13%,
+    rgba(226, 50, 197, 1) 40%,
+    rgba(253, 29, 29, 1) 74%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+.contact .contact-box .facebook {
+  background: #1877f2;
+  background-color: #1877f2;
+}
+.contact .contact-box .line {
+  background: #21b94e;
+  background-color: #21b94e;
+}
+.contact .contact-box .contact-card:nth-child(1) {
+  animation: pop 0.5s forwards;
+  opacity: 0;
+  animation-delay: 0.35s;
+}
+.contact .contact-box .contact-card:nth-child(2) {
+  animation: pop 0.5s forwards;
+  opacity: 0;
+  animation-delay: 0.45s;
+}
+.contact .contact-box .contact-card:nth-child(3) {
+  animation: pop 0.5s forwards;
+  opacity: 0;
+  animation-delay: 0.55s;
+}
+.contact .contact-box .contact-card:hover {
+  border: 3px solid rgb(106, 131, 255);
+}
+.contact .contact-box .contact-card a {
+  color: white;
+  font-size: 35px;
+  transition: 0.35s;
+}
+.contact .contact-box .contact-card h3,
+h4,
+a {
+  margin: 25px;
+}
+.contact .contact-box .contact-card h3 {
+  font-size: 35px;
+}
+.contact .contact-box .contact-card a i {
+  margin: 35px;
+}
+.contact .contact-box .contact-card a {
+  font-size: 75px;
+}
+.contact .contact-box .contact-card a:hover {
+  color: #ffffff;
+  filter: drop-shadow(0 0 9px cyan);
+}
+.contact .contact-box .contact-card:hover {
+  background-color: #2327ff;
+  transform: translateY(-15px);
+  filter: drop-shadow(0 0 9px rgb(0, 110, 255));
+}
+/*--------------------------scroll bar-----------------------*/
+::-webkit-scrollbar {
+  width: 8px; /* ความกว้างของ scroll bar */
+  height: 8px; /* ความสูงของ scroll bar (สำหรับ horizontal scroll) */
+}
+
+/* Style ตัว track (ส่วนที่อยู่ของ scroll bar) */
+::-webkit-scrollbar-track {
+  background: #ffffff; /* สีของ track */
+  border-radius: 10px;
+}
+
+/* Style ตัว thumb (ส่วนที่เลื่อนใน scroll bar) */
+::-webkit-scrollbar-thumb {
+  background: #bdbdbd; /* สีของ thumb */
+  border-radius: 10px;
+}
+
+/* Style thumb เมื่อ hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #bdbdbd; /* เปลี่ยนสีของ thumb เมื่อ hover */
+}
+/*--------------------------keyframe-----------------------*/
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(125px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(75px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-125px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(-75px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+/* ---------------------------------------------- */
+@media screen and (max-width: 1400px) {
+  .contact-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    /* border: 1px solid red; */
+  }
+  .contact .contact-box .contact-card a {
+    color: white;
+    font-size: 25px;
+    transition: 0.35s;
+  }
+  .contact .contact-box .contact-card h3,
+  h4,
+  a {
+    margin: 35px;
+  }
+  .contact .contact-box .contact-card {
+    color: white;
+    height: 650px;
+    text-align: center;
+    width: 650px;
+    margin: 35px;
+    border-radius: 15px;
+    transition: background 0.35s ease-out;
+    border: 3px solid rgb(255, 255, 255);
+    filter: drop-shadow(0 0 9px rgb(17, 72, 255));
+    /* padding: 25px; */
+  }
+  .contact .contact-box .contact-card h3 {
+    font-size: 40px;
+  }
+  .contact .contact-box .contact-card a i {
+    margin: 35px;
+  }
+  .contact .contact-box .contact-card a {
+    font-size: 75px;
+  }
+  .contact .head-contact h2 {
+    font-size: 65px;
+    font-weight: 800;
+    background: -webkit-linear-gradient(
+      145deg,
+      rgba(38, 22, 215, 1) 25%,
+      rgba(201, 0, 255, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: pop 0.5s forwards;
+    opacity: 0;
+    animation-delay: 0.35s;
+    margin: 50px 0px;
+  }
+  .contact {
+    height: auto;
+  }
+}
+@media screen and (max-width: 1140px) {
+  .nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  #contact {
+    display: none;
+  }
+}
+@media screen and (max-width: 435px) {
+  .contact .contact-box .contact-card {
+    color: white;
+    height: 350px;
+    text-align: center;
+    width: 350px;
+    margin: 35px;
+    border-radius: 15px;
+    transition: background 0.35s ease-out;
+    border: 3px solid rgb(255, 255, 255);
+    filter: drop-shadow(0 0 9px rgb(17, 72, 255));
+    /* padding: 25px; */
+  }
+  .logo h2 {
+    font-size: 25px;
+  }
+  .contact .head-contact h2 {
+    font-size: 45px;
+    font-weight: 800;
+    background: -webkit-linear-gradient(
+      145deg,
+      rgba(38, 22, 215, 1) 25%,
+      rgba(201, 0, 255, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: pop 0.5s forwards;
+    opacity: 0;
+    animation-delay: 0.35s;
+  }
+  .contact .contact-box .contact-card h3 {
+    font-size: 30px;
+  }
+  .contact .contact-box .contact-card a i {
+    margin: 30px;
+  }
+  .contact .contact-box .contact-card a {
+    font-size: 65px;
+  }
+  .contact .contact-box .contact-card {
+    color: white;
+    height: 450px;
+    text-align: center;
+    width: 450px;
+    margin: 35px;
+    border-radius: 15px;
+    transition: background 0.35s ease-out;
+    border: 3px solid rgb(255, 255, 255);
+    filter: drop-shadow(0 0 9px rgb(17, 72, 255));
+    /* padding: 25px; */
+  }
+}
+@media screen and (max-width: 421px) {
+  .contact .contact-box .contact-card {
+    height: 275px;
+    width: 275px;
+    margin: 35px;
+  }
+  .contact .contact-box .contact-card h3 {
+    font-size: 25px;
+  }
+  .contact .contact-box .contact-card a i {
+    margin: 0px;
+  }
+  .contact .contact-box .contact-card a {
+    font-size: 55px;
+  }
+}

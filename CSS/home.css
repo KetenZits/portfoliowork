@@ -1,0 +1,445 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Thai:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  /* background: rgb(10, 91, 139);
+  background: linear-gradient(
+    175deg,
+    rgba(10, 91, 139, 1) 25%,
+    rgba(20, 156, 236, 1) 100%
+  ); */
+  background: rgb(38, 22, 215);
+  background: linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+}
+
+:root {
+  --gap-nav-bar: 2.5rem;
+  --color-normal-font: rgb(12, 117, 214);
+  --color-supnormal-font: rgb(75, 157, 234);
+  --color-supersupnormal-font: rgb(113, 185, 253);
+  --color-hover-font: rgb(133, 196, 255);
+  --shadow-color-hover: rgb(90, 174, 252);
+  --activity-color-font: #073c5b;
+  --supactivity-color-font: #0a5b8b;
+  --big-font-size: 2.75rem;
+  --h1-font-size: 1.8rem;
+  --h2-font-size: 1.65rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --mg-section: 5rem;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+  font-family: "Kanit", serif;
+  list-style-type: none;
+}
+
+/*-----------------------------------------------------*/
+.logo h2 {
+  background: -webkit-linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: var(--big-font-size);
+  cursor: pointer;
+  font-weight: 800;
+  /* border: 1px solid; */
+}
+.logo img {
+  max-width: 65px;
+}
+.header {
+  display: flex;
+  /* border: 1px solid red; */
+  justify-content: space-evenly;
+  align-items: center;
+  height: 75px;
+  /* background-color: #d7c016; */
+  background-color: white;
+}
+.header ul {
+  display: flex;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  gap: var(--gap-nav-bar);
+}
+.nav li a {
+  font-size: var(--h1-font-size);
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: var(--font-medium);
+  transition: 0.2s ease;
+}
+.nav li a:hover {
+  background: -webkit-linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 10px #0800ff);
+}
+.header li #contact {
+  font-size: var(--h1-font-size);
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: var(--font-medium);
+  padding: 10px 15px;
+  border-radius: 15px;
+  transition: 0.25s ease;
+}
+.header li #contact:hover {
+  background: linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+  color: white;
+  filter: drop-shadow(0 0 5px rgb(132, 0, 255));
+}
+/*---------------------------mobile-nav------------------------*/
+.hamburger {
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-color);
+  display: none;
+}
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  background: white;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+  padding: 50px 20px;
+  transition: right 0.4s ease-in-out;
+  z-index: 999;
+}
+.mobile-menu.show {
+  right: 0;
+}
+.mobile-menu a {
+  display: block;
+  padding: 15px;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.mobile-menu a:hover {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 10px #0800ff);
+}
+.mobile-menu .cta {
+  display: block;
+  background-color: #008cff; /* สีส้ม หรือเปลี่ยนเป็นสีอื่นที่ต้องการ */
+  padding: 10px;
+  text-align: center;
+  border-radius: 15px;
+  color: rgb(255, 255, 255); /* สีตัวอักษร */
+  margin-top: 20px;
+  font-weight: bold;
+}
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+/*---------------------------mobile-nav------------------------*/
+.profile_header {
+  /* background: rgb(195, 220, 241); */
+  /* background: linear-gradient(
+    132deg,
+    rgba(195, 220, 241, 1) 0%,
+    rgba(143, 204, 255, 1) 100%
+  ); */
+  height: 100dvh;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* border: 1px solid red; */
+  height: 85dvh;
+  background-color: #ffffff;
+  /* padding-bottom: 270px; */
+  margin: 25px 25px;
+  border-radius: 15px;
+}
+.profile .name {
+  color: white;
+  /* border: 1px solid red; */
+  height: 275px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.profile .name .det-name h1 {
+  font-size: var(--big-font-size);
+  background: -webkit-linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  animation: pop 0.5s forwards;
+  opacity: 0;
+}
+.profile .name .det-name h2 {
+  font-size: var(--h1-font-size);
+  background: -webkit-linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  opacity: 0.7;
+  animation: pop 0.5s forwards;
+  opacity: 0;
+  animation-delay: 0.25s;
+}
+.profile .name .det-name h3 {
+  font-size: var(--h2-font-size);
+  background: -webkit-linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  opacity: 0.5;
+  animation: pop 0.5s forwards;
+  opacity: 0;
+  animation-delay: 0.5s;
+}
+.profile .name h3 a {
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  animation: pop 0.5s forwards;
+  opacity: 0;
+  animation-delay: 0.75s;
+}
+.profile .name .but_about {
+  padding: 15px 20px;
+  background: linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+  border-radius: 10px;
+  margin: 15px 0px;
+  transition: 0.25s ease;
+}
+.profile .name .but_about:hover {
+  background-color: rgb(255, 0, 255);
+  color: white;
+  filter: drop-shadow(0 0 10px rgb(179, 0, 255));
+}
+.profile img {
+  max-width: 350px;
+  border-radius: 50%;
+  display: block;
+  border: 8px solid transparent;
+  background: linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+  background-clip: padding-box;
+  padding: 8px;
+  transition: 0.35s;
+  animation: pop 0.5s forwards;
+  opacity: 0;
+  animation-delay: 0.5s;
+}
+/*-----------------------------------------------------*/
+/*--------------------------footer-----------------------*/
+footer {
+  height: 175px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  text-align: center;
+}
+footer .det-footer {
+  margin: 10px 15px;
+}
+footer .det-footer h3 {
+  font-size: var(--h3-font-size);
+  background: -webkit-linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+footer .det-icon {
+  font-size: var(--h2-font-size);
+}
+footer .det-icon a {
+  margin: 15px;
+  text-decoration: none;
+  background: -webkit-linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+footer .det-footer hr {
+  color: rgb(0, 0, 0);
+  height: 2px;
+  opacity: 1;
+  width: 250px;
+}
+
+/*--------------------------scroll bar-----------------------*/
+::-webkit-scrollbar {
+  width: 8px; /* ความกว้างของ scroll bar */
+  height: 8px; /* ความสูงของ scroll bar (สำหรับ horizontal scroll) */
+}
+
+/* Style ตัว track (ส่วนที่อยู่ของ scroll bar) */
+::-webkit-scrollbar-track {
+  background: #ffffff; /* สีของ track */
+  border-radius: 10px;
+}
+
+/* Style ตัว thumb (ส่วนที่เลื่อนใน scroll bar) */
+::-webkit-scrollbar-thumb {
+  background: #bdbdbd; /* สีของ thumb */
+  border-radius: 10px;
+}
+
+/* Style thumb เมื่อ hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #bdbdbd; /* เปลี่ยนสีของ thumb เมื่อ hover */
+}
+/*--------------------------keyframe-----------------------*/
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/*--------------------------keyframe-----------------------*/
+@media screen and (max-width: 1140px) {
+  .nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  #contact {
+    display: none;
+  }
+  .profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .profile .name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .profile .name h3 a {
+    position: relative;
+    top: 45px;
+  }
+}
+@media screen and (max-width: 505px) {
+  .profile .name .det-name h1 {
+    font-size: 2.5em;
+  }
+  .profile .name .det-name h2 {
+    font-size: 2em;
+  }
+  .profile .name .det-name h3 {
+    font-size: 1.5em;
+  }
+  .profile .name .det-name h3 a {
+    font-size: 1.75em;
+  }
+}
+@media screen and (max-width: 455px) {
+  .profile img {
+    max-width: 250px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .profile .name .det-name h1 {
+    font-size: 2em;
+  }
+  .profile .name .det-name h2 {
+    font-size: 1.5em;
+  }
+  .profile .name .det-name h3 {
+    font-size: 1em;
+  }
+  .profile .name .det-name h3 a {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .profile img {
+    max-width: 200px;
+  }
+  .profile .name h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .profile img {
+    max-width: 150px;
+  }
+  .profile .name h1 {
+    font-size: 1.75rem;
+  }
+}

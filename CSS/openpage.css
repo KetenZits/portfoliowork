@@ -1,0 +1,458 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Thai:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  /* background: rgb(10, 91, 139);
+  background: linear-gradient(
+    175deg,
+    rgba(10, 91, 139, 1) 25%,
+    rgba(20, 156, 236, 1) 100%
+  ); */
+  background: rgb(38, 22, 215);
+  background: linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+}
+
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  touch-action: manipulation;
+  overflow-y: scroll;
+}
+
+:root {
+  --gap-nav-bar: 2.5rem;
+  --color-normal-font: rgb(51, 156, 255);
+  --color-supnormal-font: rgb(91, 175, 253);
+  --color-supersupnormal-font: rgb(113, 185, 253);
+  --color-hover-font: rgb(133, 196, 255);
+  --shadow-color-hover: rgb(90, 174, 252);
+  --activity-color-font: #073c5b;
+  --supactivity-color-font: #0a5b8b;
+  --big-font-size: 2.75rem;
+  --h1-font-size: 1.8rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --mg-section: 5rem;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+  font-family: "Kanit", serif;
+  list-style-type: none;
+}
+
+/*-----------------------------------------------------*/
+.open {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  /* border: 1px solid red; */
+  height: 100dvh;
+  background-color: #ffffff;
+  padding: 2rem 2.5rem;
+  margin: 25px 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 35px blue inset;
+  min-height: -webkit-fill-available;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.open img {
+  max-width: 450px;
+  border-radius: 35px;
+  border: 5px solid blue;
+  filter: drop-shadow(0 0 15px blue);
+  transition: 0.5s;
+  animation: pop 0.55s forwards;
+  opacity: 0;
+  animation-delay: 0.5s;
+}
+.open .open-det h1 {
+  font-size: 100px;
+  margin: 35px;
+  background: -webkit-linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  animation: pop 0.55s forwards;
+  opacity: 0;
+}
+.open .open-det h2 {
+  font-size: 80px;
+  font-weight: 700;
+  margin-bottom: 80px;
+  background: -webkit-linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.8;
+  animation: pop 0.55s forwards;
+  animation-delay: 0.35s;
+  opacity: 0;
+}
+.open .open-det a {
+  background: rgb(38, 22, 215);
+  background: linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+  font-size: 45px;
+  padding: 20px 20px;
+  text-decoration: none;
+  color: white;
+  border-radius: 35px;
+  border: 3px solid white;
+  animation: pop 0.55s forwards;
+  animation-delay: 0.65s;
+  opacity: 0;
+}
+.open .open-det a {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.open .open-det a:hover {
+  border: 3px solid black;
+  filter: drop-shadow(0 0 15px rgb(51, 51, 254));
+}
+.open .open-det a {
+  transition: 0.25s;
+}
+.open .open-det a {
+  transform: scale(1.2);
+}
+/*-----------------------------------------------------*/
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/*-----------------------------------------------------*/
+/*--------------------------scroll bar-----------------------*/
+::-webkit-scrollbar {
+  width: 8px; /* ความกว้างของ scroll bar */
+  height: 8px; /* ความสูงของ scroll bar (สำหรับ horizontal scroll) */
+}
+
+/* Style ตัว track (ส่วนที่อยู่ของ scroll bar) */
+::-webkit-scrollbar-track {
+  background: #ffffff; /* สีของ track */
+  border-radius: 10px;
+}
+
+/* Style ตัว thumb (ส่วนที่เลื่อนใน scroll bar) */
+::-webkit-scrollbar-thumb {
+  background: #bdbdbd; /* สีของ thumb */
+  border-radius: 10px;
+}
+
+/* Style thumb เมื่อ hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #bdbdbd; /* เปลี่ยนสีของ thumb เมื่อ hover */
+}
+/*--------------------------footer-----------------------*/
+footer {
+  height: 175px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  text-align: center;
+}
+footer .det-footer {
+  margin: 10px 15px;
+}
+footer .det-footer h3 {
+  font-size: var(--h3-font-size);
+  background: -webkit-linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+footer .det-icon {
+  font-size: var(--h2-font-size);
+}
+footer .det-icon a {
+  margin: 15px;
+  text-decoration: none;
+  background: -webkit-linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+footer .det-footer hr {
+  color: rgb(0, 0, 0);
+  height: 2px;
+  opacity: 1;
+  width: 250px;
+}
+/*--------------------------scroll bar-----------------------*/
+@media screen and (max-width: 1045px) {
+  .open {
+    flex-direction: column;
+    height: auto;
+    min-height: -webkit-fill-available;
+  }
+}
+@media screen and (max-width: 1045px) {
+  .open {
+    flex-direction: column;
+    height: auto;
+    min-height: -webkit-fill-available;
+  }
+}
+/* iPhone-specific media queries */
+@media screen and (max-width: 428px) {
+  .open {
+    margin: 15px;
+    padding: 1.5rem;
+  }
+  .open .open-det h1 {
+    font-size: 40px;
+    margin: 20px;
+  }
+  .open .open-det h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  .open .open-det a {
+    font-size: 20px;
+    padding: 15px;
+  }
+  .open img {
+    max-width: 250px;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .open img {
+    max-width: 350px;
+    border-radius: 35px;
+    border: 5px solid blue;
+    filter: drop-shadow(0 0 15px blue);
+    transition: 0.5s;
+    animation: pop 0.55s forwards;
+    opacity: 0;
+    animation-delay: 0.5s;
+  }
+  .open .open-det h1 {
+    font-size: 90px;
+    margin: 35px;
+    background: -webkit-linear-gradient(
+      145deg,
+      rgba(38, 22, 215, 1) 25%,
+      rgba(201, 0, 255, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    animation: pop 0.55s forwards;
+    opacity: 0;
+  }
+  .open .open-det h2 {
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 80px;
+    background: -webkit-linear-gradient(
+      145deg,
+      rgba(38, 22, 215, 1) 25%,
+      rgba(201, 0, 255, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.8;
+    animation: pop 0.55s forwards;
+    animation-delay: 0.35s;
+    opacity: 0;
+  }
+  .open .open-det a {
+    background: rgb(38, 22, 215);
+    background: linear-gradient(
+      145deg,
+      rgba(38, 22, 215, 1) 25%,
+      rgba(201, 0, 255, 1) 100%
+    );
+    font-size: 35px;
+    padding: 20px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 35px;
+    border: 3px solid white;
+    animation: pop 0.55s forwards;
+    animation-delay: 0.65s;
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 1045px) {
+  .open {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    height: auto;
+    background-color: #ffffff;
+    padding: 2rem 2.5rem;
+    margin: 25px 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 35px blue inset;
+    min-height: -webkit-fill-available;
+    overflow-x: scroll;
+  }
+}
+@media screen and (max-width: 450px) {
+  .open {
+    display: flex;
+    flex-direction: column;
+    height: 94dvh;
+    overflow-x: hidden;
+    .open-det {
+      h1 {
+        font-size: 55px;
+      }
+      h2 {
+        font-size: 35px;
+      }
+      a {
+        font-size: 25px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 740px) {
+  .open {
+    display: flex;
+    flex-direction: column;
+    height: 95dvh;
+    .open-det {
+      h1 {
+        font-size: 55px;
+      }
+      h2 {
+        font-size: 35px;
+      }
+      a {
+        font-size: 25px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 560px) {
+  .open {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    .open-det {
+      h1 {
+        font-size: 55px;
+      }
+      h2 {
+        font-size: 35px;
+      }
+      a {
+        font-size: 25px;
+      }
+    }
+  }
+  .open img {
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 475px) {
+  .open {
+    display: flex;
+    flex-direction: column;
+    height: 95dvh;
+    .open-det {
+      h1 {
+        font-size: 55px;
+      }
+      h2 {
+        font-size: 35px;
+      }
+      a {
+        font-size: 25px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 415px) {
+  .open {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    .open-det {
+      h1 {
+        font-size: 55px;
+      }
+      h2 {
+        font-size: 35px;
+      }
+      a {
+        font-size: 25px;
+      }
+    }
+  }
+  .open img {
+    max-width: 275px;
+  }
+}
+@media screen and (max-width: 365px) {
+  .open {
+    display: flex;
+    flex-direction: column;
+    height: 95dvh;
+    .open-det {
+      h1 {
+        font-size: 35px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      a {
+        font-size: 18px;
+      }
+    }
+  }
+  .open img {
+    max-width: 225px;
+  }
+}

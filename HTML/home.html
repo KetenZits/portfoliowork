@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/home.css" />
+  </head>
+  <body>
+    <div class="profile_header">
+      <div class="header">
+        <div class="logo">
+          <!-- <a href="/index.html"><h2>PORTFOLIO</h2></a> -->
+          <img src="/PIC/navpic/sarasas.jpg" alt="" />
+          <img src="/PIC/navpic/iroverbot.jpg" alt="" />
+        </div>
+        <div class="nav">
+          <li><a href="/HTML/home.html">Home</a></li>
+          <li><a href="/HTML/activity.html">Activity</a></li>
+          <li><a href="/HTML/about.html">About</a></li>
+        </div>
+        <li><a href="/HTML/contact.html" id="contact">Contact</a></li>
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="close-btn" onclick="toggleMenu()">&times;</div>
+        <a href="/HTML/home.html">Home</a>
+        <a href="/HTML/activity.html">Activity</a>
+        <a href="/HTML/about.html">About</a>
+        <a href="/HTML/contact.html" class="cta">Contact</a>
+      </div>
+      <!-- ---------------------- -->
+      <div class="profile">
+        <div class="name">
+          <div class="det-name">
+            <span><h1>TEERATAT WIBOONSANTI</h1></span>
+            <h2>PARTY</h2>
+            <h3>Sarasas Witaed Bangbuathong</h3>
+          </div>
+          <h3><a href="/HTML/activity.html" class="but_about">Activity</a></h3>
+        </div>
+        <div class="pic">
+          <img src="/PIC/use/profile/profile1.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="det-footer">
+        <h3>Portfolio Teeratat Wiboonsanti</h3>
+        <hr />
+      </div>
+      <div class="det-icon">
+        <a
+          href="https://www.instagram.com/wiboonasti?igsh=bGJ2M2FpbjF6Yjh4&utm_source=qr"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/profile.php?id=61554584263650&mibextid=JRoKGi"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://line.me/ti/p/BGCkAemJQA"
+          ><i class="fa-brands fa-line"></i
+        ></a>
+      </div>
+    </footer>
+  </body>
+  <script src="/JS/app.js"></script>
+</html>

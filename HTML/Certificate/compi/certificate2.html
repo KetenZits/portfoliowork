@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Certificate</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/CSS/certificate/certificate1.css" />
+  </head>
+  <body>
+    <!-------------header--------------->
+    <div class="header">
+      <div class="logo">
+        <img src="/PIC/navpic/sarasas.jpg" alt="" />
+        <img src="/PIC/navpic/iroverbot.jpg" alt="" />
+      </div>
+      <div class="nav">
+        <li><a href="/HTML/home.html">Home</a></li>
+        <li><a href="/HTML/activity.html">Activity</a></li>
+        <li><a href="/HTML/about.html">About</a></li>
+      </div>
+      <li><a href="/HTML/contact.html" id="contact">Contact</a></li>
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="close-btn" onclick="toggleMenu()">&times;</div>
+      <a href="/HTML/home.html">Home</a>
+      <a href="/HTML/activity.html">Activity</a>
+      <a href="/HTML/about.html">About</a>
+      <a href="/HTML/contact.html" class="cta">Contact</a>
+    </div>
+    <!-- ---------------------- -->
+    <main>
+      <div class="certificate">
+        <div class="head-certificate">
+          <h2>Certificate</h2>
+          <h3>การแข่งขัน micro:bit</h3>
+        </div>
+        <div class="certificate-detail">
+          <div class="text">
+            <div class="head-text">
+              <h2>ได้ผ่านเข้ารอบ 12 ทีม</h2>
+              <h3>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</h3>
+              <h3>วันที่ 2 – 3 สิงหาคม 2567</h3>
+            </div>
+            <div class="det-text">
+              <h5>
+                การแข่งขันนี้ กระผมได้เข้ารอบ การแข่งโดยที่ทีมของผมสร้าง
+                หุ่นยนต์ช่วยประชาชน(ข้ามทางม้าลาย)
+                วัตถุประสงค์ที่กระผมสร้างหุ่นยนต์ข้ามทางม้าลายเพราะกระผมเพื่อลดอุบัติเหตุสําหรับเด็กและผู้พิการและคิดว่ามันเป็นสิ่งประดิษฐ์ที่มีความคิดสร้างสรรค์คิดว่าเด็กๆน่าจะตื้นเต้นและมีความสุขเวลาข้ามทางม้าลายและมีหุ่นยนต์เปรียบสเหมือนบอดี้การ์ดที่พาข้ามโดยถึงที่หมายปลอดภัย
+                โครงงาน หุ่นยนต์ช่วยประชาชน(ข้ามทางม้าลาย) ด้วยบอร์ด microbit
+                โดยที่ สอดคล้องกับเป้าหมายการพัฒนาอย่าง
+                ยั่งยืนขององค์การสหประชาชาติ 1 เป้าหมาย 1. เป้าหมายที่ 11
+                เมืองและชุมชนที่ยั่งยืน
+              </h5>
+            </div>
+          </div>
+          <div class="gallery">
+            <div class="pic">
+              <!-- Gallery -->
+              <div class="gallery-container">
+                <div class="gallery-item">
+                  <img
+                    src="/PIC/use/compitition/microbit/pic1.jpg"
+                    class="popup-trigger"
+                    alt="Boat on Calm Water"
+                  />
+
+                  <img
+                    src="/PIC/use/compitition/microbit/pic2.jpg"
+                    class="popup-trigger"
+                    alt="Wintry Mountain Landscape"
+                  />
+                </div>
+
+                <div class="gallery-item">
+                  <img
+                    src="/PIC/use/compitition/microbit/pic3.jpg"
+                    class="popup-trigger"
+                    alt="Mountains in the Clouds"
+                  />
+
+                  <img
+                    src="/PIC/use/compitition/microbit/pic4.jpg"
+                    class="popup-trigger"
+                    alt="Boat on Calm Water"
+                  />
+                </div>
+
+                <div class="gallery-item">
+                  <img
+                    src="/PIC/use/compitition/microbit/pic5.jpg"
+                    class="popup-trigger"
+                    alt="Waves at Sea"
+                  />
+
+                  <img
+                    src="/PIC/use/compitition/microbit/pic6.jpg"
+                    class="popup-trigger"
+                    alt="Yosemite National Park"
+                  />
+                  <img
+                    src="/PIC/use/compitition/microbit/pic7.jpg"
+                    class="popup-trigger"
+                    alt="Yosemite National Park"
+                  />
+                  <div class="popup" id="image-popup">
+                    <span class="popup-close">&times;</span>
+                    <img src="" alt="รูปภาพขยาย" id="popup-img" />
+                  </div>
+                </div>
+              </div>
+              <!-- Gallery -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="certi-img">
+        <img
+          src="/PIC/use/compitition/microbit/certificate.jpg"
+          alt="certificate"
+        />
+      </div>
+      <!------------------------------>
+    </main>
+    <footer>
+      <div class="det-footer">
+        <h3>Portfolio Teeratat Wiboonsanti</h3>
+        <hr />
+      </div>
+      <div class="det-icon">
+        <a
+          href="https://www.instagram.com/wiboonasti?igsh=bGJ2M2FpbjF6Yjh4&utm_source=qr"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/profile.php?id=61554584263650&mibextid=JRoKGi"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://line.me/ti/p/BGCkAemJQA"
+          ><i class="fa-brands fa-line"></i
+        ></a>
+      </div>
+    </footer>
+    <script src="/JS/certificate.js"></script>
+    <script src="/JS/app.js"></script>
+  </body>
+</html>

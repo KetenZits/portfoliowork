@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Thai:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  /* background: rgb(10, 91, 139);
+  background: linear-gradient(
+    175deg,
+    rgba(10, 91, 139, 1) 25%,
+    rgba(20, 156, 236, 1) 100%
+  ); */
+  background: rgb(38, 22, 215);
+  background: linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+}
+
+:root {
+  --gap-nav-bar: 2.5rem;
+  --color-normal-font: rgb(12, 117, 214);
+  --color-supnormal-font: rgb(75, 157, 234);
+  --color-supersupnormal-font: rgb(113, 185, 253);
+  --color-hover-font: rgb(133, 196, 255);
+  --shadow-color-hover: rgb(90, 174, 252);
+  --activity-color-font: #073c5b;
+  --supactivity-color-font: #0a5b8b;
+  --big-font-size: 2.75rem;
+  --h1-font-size: 1.8rem;
+  --h2-font-size: 1.65rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --mg-section: 5rem;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+  font-family: "Kanit", serif;
+  list-style-type: none;
+}
+
+/*-----------------------------------------------------*/
+
+.logo h2 {
+  background: -webkit-linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: var(--big-font-size);
+  cursor: pointer;
+  font-weight: 800;
+  /* border: 1px solid; */
+}
+.header {
+  display: flex;
+  /* border: 1px solid red; */
+  justify-content: space-evenly;
+  align-items: center;
+  height: 75px;
+  /* background-color: #d7c016; */
+  background-color: white;
+}
+.header ul {
+  display: flex;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  gap: var(--gap-nav-bar);
+}
+.nav li a {
+  font-size: var(--h1-font-size);
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: var(--font-medium);
+  transition: 0.2s ease;
+}
+.nav li a:hover {
+  background: -webkit-linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 10px #0800ff);
+}
+.header li #contact {
+  font-size: var(--h1-font-size);
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: var(--font-medium);
+  padding: 10px 15px;
+  border-radius: 15px;
+  transition: 0.25s ease;
+}
+.header li #contact:hover {
+  background: linear-gradient(
+    145deg,
+    rgba(38, 22, 215, 1) 25%,
+    rgba(201, 0, 255, 1) 100%
+  );
+  color: white;
+  filter: drop-shadow(0 0 5px rgb(132, 0, 255));
+}
+/*-----------------------------------------------------*/
